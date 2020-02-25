@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Scrollama: Sticky Overlay Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='./style.css'>
+	<style>
+		@font-face {
+    		font-family: Helvetica;
+    		src: url(./Helvetica.ttf);
+		}
+		#scrolly {
+			position: relative;
+			background-color: #FFF;
+			padding: 1rem;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 40%;
+			margin: 0 auto;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: #FFF;
+			z-index: 0;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #FF0000;
+		}
+		img {
+			margin: 0;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-right: -50%;
+		    transform: translate(-50%, -50%)
+		}
+		iframe{
+			width:100%;
+			height:100%;
+			position:absolute;
+			left:0px;
+			top: 0px;
+			width:100%;
+			height:100%;
+		}
+
+
+		.step {
+			margin: 0 auto 2rem auto; /*两个框之间距离*/
+			background-color: rgba(0,0,0,0);
+			
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active p {
+			background-color: rgba(239,239,239,0.5);
+		}
+
+		.step p {
+			text-align: left;
+			padding: 2rem;
+			font-size: 8pt;
+			line-height: 18px;
+			font-family: Helvetica;
+			background-color: rgba(239,239,239,0.5); 
+		}
+	</style>
+
+</head>
+
+<body>
+	
+	<main>
+
+		<section id='scrolly'>
+
+			<figure>
+				<div>
+					<img src='./CGTN_image.png' style="width:20%;z-index:2">
+ 					<iframe id ='CGTN' src='./CGTN/CGTN.html#slide-0' frameborder='0' scrolling='no' style='z-index: -1;'>
+					</iframe>
+				</div>
+				
+				
+			</figure>
+
+			<article >
+				<div class='step' data-step='1'>
+					<p>They are like pearls scattered along the long history and connect chapters that mark the interactions between China and the outside world and should not be overlooked.
+					</p>
+				</div>
+
+				<div class='step' data-step='2'>
+					<p>Despite the highs and lows, they are memorable chapters recording China opens up her door and welcomes economic, trade and cultural exchanges with the outside world.
+					</p>
+				</div>
+
+				<div class='step' data-step='3'>
+					<p style="padding-bottom: 0;font-size:11pt;"> <span style=" color:rgb(255,56,77);font-weight: bold;">&bull; 1949-1978:</span> Searching far and wide: from self-isolation to opening up.</p>
+
+					<p style="padding-top: 0.8rem;padding-bottom: 0;">First articles on foreigners: What we can learn from Norman Bethune and In Memory of Great Internationalist: Norman Bethune on 12 November 1949;</p>
+
+					<p style="padding-top: 0.35rem;padding-bottom: 0;">The first article on regulatory policy: Two Decrees of the Municipal Government on Regulating and Fostering Private Primary and High Schools on 19 August 1949, which stated no foreigner might fill the posts of principals of missionary schools.</p>
+
+					<p style="padding-top: 0.35rem;">Despite the favourable political and economic relations among the Soviet Union, Eastern Europe and China in the 1950s and the trade contacts with the West and the introduction of technology, China remained isolated in general. China’s economic development and diplomacy were plagued with errors especially from the 1960s onwards. For instance, emphasis was placed on “being guided by class struggle” when developing the economy, and all developed Western countries were regarded as imperialists, revisionists and anti-revolutionary, consequently the “non-conforming” struggle was waged against them. It is evident that the under <span style="color:rgb(255,56,77);font-weight: bold;">3%</span> coverage on regulatory policies reflected our self-isolation and attempts to draw a clear line with the outside world.</p>
+				</div>
+
+				<div class='step' data-step='4'>
+					<p style="padding-bottom: 0;font-size:11pt; "> <span style="color:rgb(108,180,78);font-weight: bold;">&bull; 1979-2012:</span> The winds of change: the policy of opening up dominated by introduction at different levels.</p>
+
+					<p style="padding-top: 0.8rem;">Following the demands of China’s opening up, coverage for the regulatory policies for foreigners in the country increased exponentially. <span style="color:rgb(255,56,77);font-weight: bold;">67%</span> of the coverage could primarily be divided into <span style="color:rgb(255,56,77);font-weight: bold;">7</span> categories, namely entry-exit management; family and marriage; investment and business; intellectual property; science, education, culture, health, arts and sports; and talents and incentives. China’s regulatory policy for foreigners grew by leaps and bounds after starting from scratch. As the scope of China’s opening up continued to expand, covering <span style="color:rgb(255,56,77);font-weight: bold;">92%</span> of the cities and counties, as many as <span style="color:rgb(255,56,77);font-weight: bold;">88</span> authorities across <span style="color:rgb(255,56,77);font-weight: bold;">20</span> provinces and municipalities were responsible for the promulgation of regulatory policies for foreigners, showing diverse synergy and complexity in management.</p>
+				</div>
+
+				<div class='step' data-step='5'>
+					<p style="padding-bottom: 0;font-size:11pt; "> <span style="color:rgb(74,116,172);font-weight: bold;">&bull; 2013-2019:</span> Riding the wind and waves and setting sail: transition from scale-focused development to content-based construction and mutual learning among civilisations to provide world governance with Chinese solutions.</p>
+
+					<p style="padding-top: 0.8rem;">As China opened up further in an all-round manner, its management of foreigners also transitioned from scale-focused development to being content-based. The intensity of reform was manifested at the following three levels to ensure rational, orderly and controllable development while promoting the exploration of all-round, in-depth reforms and coordinated development. Being self-focused and fair, learning from each other and sharing information became the focus of this period in managing foreigners in the country.</p>
+				</div>
+
+				<div class='step' data-step='6'>
+					<p>As China opened up further in an all-round manner, its management of foreigners also transitioned from scale-focused development to being content-based.
+					</p>
+				</div>
+				
+			</article>
+
+
+		</section>
+
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
+	<script src='./stickyfill.min.js'></script>
+	<script src='./scrollama.min.js'></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select('main')
+		var scrolly = main.select('#scrolly');
+		var figure = scrolly.select('figure');
+		var article = scrolly.select('article');
+		var step = article.selectAll('.step');
+		var dic = new Array()
+		// initialize the scrollama
+		var scroller = scrollama();
+		dic[0] = 0
+		dic[1] = 1
+		dic[2] = 2
+		dic[3] = 2
+		dic[4] = 2
+		dic[5] = 3
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.75);
+			var stepW = Math.floor(window.width);
+			step.style('height', stepH + 'px');
+			//step.style('weight', stepW + 'px');
+
+			var figureHeight = window.innerHeight // 2
+			var figureMarginTop = (window.innerHeight - figureHeight) // 2
+
+			figure
+				.style('height', figureHeight + 'px')
+				.style('top', figureMarginTop + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response)
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+
+			// update graphic based on step
+			//figure.select('p').text(response.index + 1);
+			CGTN.src = "./CGTN/CGTN.html#slide-"+String(dic[response.index]);
+			CGTN.style='z-index:'+String(response.index)
+
+		}
+
+		function setupStickyfill() {
+			d3.selectAll('.sticky').each(function () {
+				Stickyfill.add(this);
+			});
+		}
+
+		function init() {
+			setupStickyfill();
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				step: '#scrolly article .step',
+				offset: 0.8,
+				debug: false,
+			})
+				.onStepEnter(handleStepEnter)
+
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>
