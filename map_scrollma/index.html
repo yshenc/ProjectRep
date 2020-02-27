@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Scrollama: Sticky Overlay Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='./style.css'>
+	<style>
+		@font-face {
+    		font-family: Helvetica;
+    		src: url(./Helvetica.ttf);
+		}
+		#scrolly {
+			position: relative;
+			background-color: #FFF;
+			padding: 1rem;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 40%;
+			margin: 0 auto;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: #FFF;
+			z-index: 0;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #FF0000;
+		}
+		img {
+			margin: 0;
+		    position: absolute;
+		    top: 68%;
+		    left: 85%;
+		    margin-right: -50%;
+		    transform: translate(-50%, -50%)
+		}
+		iframe{
+			width:100%;
+			height:100%;
+			position:absolute;
+			left:0px;
+			top: 0px;
+			width:100%;
+			height:100%;
+		}
+
+
+		.step {
+			margin: 0 auto 2rem auto; /*两个框之间距离*/
+			background-color: rgba(0,0,0,0);
+			
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active p {
+			background-color: rgba(239,239,239,0.5);
+		}
+
+		.step p {
+			text-align: left;
+			padding: 1rem;
+			font-size: 8pt;
+			line-height: 18px;
+			font-family: Helvetica;
+			background-color: rgba(239,239,239,0.5); 
+		}
+	</style>
+
+</head>
+
+<body>
+	
+	<main>
+
+		<section id='scrolly'>
+
+			<figure>
+				<div>
+					<img src='./9lines.png' style="width:8%;z-index:2">
+ 					<iframe id ='CGTN' src='./CGTN/CGTN.html#slide-0' frameborder='0' scrolling='no' style='z-index: -1;'>
+					</iframe>
+				</div>
+				
+				
+			</figure>
+
+			<article >
+				<div class='step' data-step='1'>
+					<p style="padding-bottom: 0;"> <span style=" font-size:13pt;color:rgb(255,56,77);font-weight: bold;">&bull; 1978</span> </p>
+					<p style="padding-top: 0.5rem;padding-left:1.8rem ">Over 100,000 foreign tourists visited China.</p>
+				</div>
+
+				<div class='step' data-step='2'>
+					<p style="padding-bottom: 0;"> <span style=" font-size:13pt;color:rgb(255,56,77);font-weight: bold;">&bull; 1985</span> </p>
+					<p style="padding-top: 0.5rem;padding-left:1.8rem">The opening up of the Tibetan Plateau saw foreigner climbers and explorers flocking to the area.</p>
+				</div>
+
+				<div class='step' data-step='3'>
+					<p style="padding-bottom: 0;"> <span style=" font-size:13pt;color:rgb(255,56,77);font-weight: bold;">&bull; 1994</span> </p>
+					<p style="padding-top: 0.5rem;padding-left:1.8rem">Foreigners holding a valid visa or residence document may visit Shennongjia National Nature Reserve without applying for a travel document. Procedures for foreign groups in Hong Kong wishing to visit Shenzhen Special Economic Zone were simplified, and the groups could stay for 72 hours.</p>
+				</div>
+
+				<div class='step' data-step='4'>
+					<p style="padding-bottom: 0;"> <span style=" font-size:13pt;color:rgb(255,56,77);font-weight: bold;">&bull; 2017</span> </p>
+					<p style="padding-top: 0.5rem;padding-left:1.8rem">In China received over 139.48 million tourists, allowing it to maintain its place as the fourth major tourist country of the world.</p>
+				</div>
+
+				<div class='step' data-step='5'>
+					<p style="padding-bottom: 0;"> <span style=" font-size:13pt;color:rgb(255,56,77);font-weight: bold;">&bull; 2018</span> </p>
+					<p style="padding-top: 0.5rem;padding-left:1.8rem">The Ministry of Public Security announced at a press conference that following the State Council’s approval, the number of countries whose tour groups may visit Hainan Province without a visa has been raised from 26 to 59 from 1 May 2018, and foreigners may visit visa-free for up to 30 days, as the visa-free policy is extended from groups to individuals. The policy is to date the most practical and open in China.</p>
+				</div>
+
+				<div class='step' data-step='6'>
+					<p style="padding-bottom: 0;"> <span style=" font-size:13pt;color:rgb(255,56,77);font-weight: bold;">&bull; 2019</span> </p>
+					<p style="padding-top: 0.5rem;padding-left:1.8rem">The 30-day visa-free policy was introduced for tourists visiting Hainan Province, benefiting 463,000 foreign visitors. Meanwhile, a 144-hour visa-free transit was launched in Beijing, Tianjin, Hebei Province and the Yangtze River Delta, and over 1.8 million visitors took advantage of the policy.</p>
+				</div>
+				
+			</article>
+
+
+		</section>
+
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
+	<script src='./stickyfill.min.js'></script>
+	<script src='./scrollama.min.js'></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select('main')
+		var scrolly = main.select('#scrolly');
+		var figure = scrolly.select('figure');
+		var article = scrolly.select('article');
+		var step = article.selectAll('.step');
+		var dic = new Array()
+		// initialize the scrollama
+		var scroller = scrollama();
+		dic[0] = 0
+		dic[1] = 0
+		dic[2] = 1
+		dic[3] = 1
+		dic[4] = 1
+		dic[5] = 1
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.75);
+			var stepW = Math.floor(window.width);
+			step.style('height', stepH + 'px');
+			//step.style('weight', stepW + 'px');
+
+			var figureHeight = window.innerHeight // 2
+			var figureMarginTop = (window.innerHeight - figureHeight) // 2
+
+			figure
+				.style('height', figureHeight + 'px')
+				.style('top', figureMarginTop + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response)
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+
+			// update graphic based on step
+			//figure.select('p').text(response.index + 1);
+			CGTN.src = "./CGTN/CGTN.html#slide-"+String(dic[response.index]);
+			CGTN.style='z-index:'+String(response.index)
+
+		}
+
+		function setupStickyfill() {
+			d3.selectAll('.sticky').each(function () {
+				Stickyfill.add(this);
+			});
+		}
+
+		function init() {
+			setupStickyfill();
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				step: '#scrolly article .step',
+				offset: 0.8,
+				debug: false,
+			})
+				.onStepEnter(handleStepEnter)
+
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>
