@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Scrollama: Sticky Overlay Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='./style.css'>
+	<link rel="stylesheet" type="text/css" href="css/1280style.css">
+	<style>
+		@font-face {
+    		font-family: Helvetica;
+    		src: url(./Helvetica.ttf);
+		}
+		#scrolly {
+			position: relative;
+			background-color: #FFF;
+			padding: 1rem;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: #FFF;
+			z-index: 0;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #FF0000;
+		}
+		iframe{
+			width:100%;
+			height:100%;
+			position:absolute;
+			left:0px;
+			top: 0px;
+			width:100%;
+			height:100%;
+		}
+
+
+		.step {
+			margin: 0 auto 15rem auto; /*两个框之间距离*/
+			
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	
+	<main>
+
+		<section id='scrolly'>
+
+			<figure>
+				
+
+				<div>
+ 					<iframe id ='CGTN' src='./CGTN/CGTN.html#slide-1' frameborder='0' scrolling='no' style='z-index: -1;'>
+					</iframe>
+				</div>
+				
+				
+			</figure>
+
+			<article >
+				<div class='step FloatWindow01' data-step='1' style='height:180px'>
+					<span class="point fl clearfix"></span>
+					<h5><span class="color01">1978</span> </h5><p>Over <span>100,000</span> foreign tourists visited China.</p>
+				</div>
+
+				<div class='step FloatWindow01' data-step='2' style='height:220px'>
+					<span class="point fl clearfix"></span>
+					<h5><span class="color01">1985</span> </h5><p>The opening up of the <span>Tibetan Plateau</span> saw foreigner climbers and explorers flocking to the area.</p>
+				</div>
+
+				<div class='step FloatWindow01' data-step='3' style='height:320px'>
+					<span class="point fl clearfix"></span>
+					<h5><span class="color01">1994</span> </h5><p>Foreigners holding a valid visa or residence document may visit <span>Shennongjia</span> National Nature Reserve without applying for a travel document. Procedures for foreign groups in Hong Kong wishing to visit Shenzhen Special Economic Zone were simplified, and the groups could stay for <span>72 hours</span>.</p>
+				</div>
+
+				<div class='step FloatWindow01' data-step='4' style='height:220px'>
+					<span class="point fl clearfix"></span>
+					<h5><span class="color01">2017</span> </h5><p>In China received over <span>139.48</span> million tourists, allowing it to maintain its place as the fourth major tourist country of the world.</p>
+				</div>
+
+				<div class='step FloatWindow01' data-step='5' style='height:360px'>
+					<span class="point fl clearfix"></span>
+					<h5><span class="color01">2018</span> </h5><p>The Ministry of Public Security announced at a press conference that following the State Council’s approval, the number of countries whose tour groups may visit Hainan Province without a visa has been raised from <span>26</span> to <span>59</span> from 1 May 2018, and foreigners may visit visa-free for up to <span>30</span> days, as the visa-free policy is extended from groups to individuals. The policy is to date the most practical and open in China.</p>
+				</div>
+
+				<div class='step FloatWindow01' data-step='6' style='height:320px'>
+					<span class="point fl clearfix"></span>
+					<h5><span class="color01">2019</span> </h5><p>The 30-day visa-free policy was introduced for tourists visiting Hainan Province, benefiting <span>463,000</span> foreign visitors. Meanwhile, a 144-hour visa-free transit was launched in Beijing, Tianjin, Hebei Province and the Yangtze River Delta, and over <span>1.8</span> million visitors took advantage of the policy.</p>
+				</div>
+
+				<div class='step' data-step='7' style='height:280px'>
+
+				</div>
+
+
+				
+			</article>
+
+
+		</section>
+
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
+	<script src='./stickyfill.min.js'></script>
+	<script src='./scrollama.min.js'></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select('main')
+		var scrolly = main.select('#scrolly');
+		var figure = scrolly.select('figure');
+		var article = scrolly.select('article');
+		var step = article.selectAll('.step');
+		var dic = new Array()
+		// initialize the scrollama
+		var scroller = scrollama();
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight*1.2);
+			var stepW = Math.floor(window.width);
+			//step.style('height', stepH + 'px');
+			//step.style('weight', stepW + 'px');
+
+			var figureHeight = window.innerHeight // 2
+			var figureMarginTop = (window.innerHeight - figureHeight) // 2
+
+			figure
+				.style('height', '600' + 'px')
+				.style('top', figureMarginTop + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response)
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+
+			// update graphic based on step
+			//figure.select('p').text(response.index + 1);
+			//CGTN.src = "./CGTN/CGTN.html#slide-"+String(dic[response.index]);
+			//CGTN.style='z-index:'+String(response.index)
+
+		}
+
+		function setupStickyfill() {
+			d3.selectAll('.sticky').each(function () {
+				Stickyfill.add(this);
+			});
+		}
+
+		function init() {
+			setupStickyfill();
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				step: '#scrolly article .step',
+				offset: 0.8,
+				debug: false,
+			})
+				.onStepEnter(handleStepEnter)
+
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+
+		// kick things off
+		init();
+
+		function changered1(){
+			document.getElementById("sycb1").style.color="#FFFFFF";
+			document.getElementById("sycb1").style.background="#FF3A4E";
+			document.getElementById("sycb2").style.color="rgb(21,21,21)";
+			document.getElementById("sycb2").style.background="#FFFFFF";
+			document.getElementById("CGTN").src="./CGTN/CGTN.html#slide-0";
+
+			}
+			function changered2(){
+			document.getElementById("sycb2").style.color="#FFFFFF";
+			document.getElementById("sycb2").style.background="#FF3A4E";
+			document.getElementById("sycb1").style.color="rgb(21,21,21)";
+			document.getElementById("sycb1").style.background="#FFFFFF";
+			document.getElementById("CGTN").src="./CGTN/CGTN.html#slide-1";
+			document.getElementById("ninelines").style.display="none";
+
+
+			}
+	</script>
+</body>
+
+</html>

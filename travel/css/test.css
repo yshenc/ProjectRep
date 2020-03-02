@@ -1,0 +1,488 @@
+@import 'reset.css';
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 55px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #707070;
+}
+
+body,p,h1,h2,h3,h4,hr{
+	margin: 0;
+
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	border: none;
+	vertical-align: middle;
+}
+a{
+	text-decoration: none;
+	color: #3c3c3c;
+}
+i{
+	font-style: normal;
+}
+input,button{
+	margin: 0;
+	padding: 0;
+}
+button{
+	outline: none;
+}
+a,hr, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+h2{
+  text-align: center;
+  font-size: 3rem;
+  line-height: 60px;
+  margin: 25px;
+
+}
+
+.intro__hed {
+    max-width: 50rem;
+    margin: 0 auto;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    line-height: 1.2;
+}
+.tiempos{
+	font-family: Helvetica;
+}
+
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.fm{
+  float: ;
+}
+
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.layer{
+  width: 100vw;
+  margin: 0 auto;
+}
+
+/*导航*/
+*{
+	box-sizing: border-box;
+
+}
+body{
+	background-color: #efefef;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+#guide{
+	width: 100%;
+	height:70px;
+}
+
+#guide a.logo{
+	font-family: Times New Roman;
+	font-weight: bold;
+	font-size: 35px;
+	margin: 0 auto;
+	line-height: 70px;
+	color: #707070;
+}
+
+#guide a.logo {
+    display: block;
+    border: none;
+    max-width: 30rem;
+}
+a:hover, a:visited {
+    color: #282828;
+}
+
+#guide .botton {
+    position: fixed;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1000;
+
+}
+#hedA{
+	
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedA img{
+    width: 100%;
+}
+
+#ContentA{
+  margin: 100px 0 100px 0;
+}
+#ContentA .TextA{
+  text-align: center;
+  
+  line-height: 60px;
+  margin: 25px;
+}
+#ContentA .TextB{
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  line-height: 30px;
+  margin: 30px;
+}
+
+
+#Banner{
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+
+}
+#Content{
+   width: 200vw;
+  display: flex;
+}
+
+
+#Content a{
+  width: 100vw;  
+}
+
+#Content a img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+/*Data From*/
+
+#hedB{
+  
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedB img{
+    width: 100%;
+}
+#ContentB{
+  margin: 8rem 0 2rem 0;
+}
+#hedD{
+    width: 5%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+#hedD img{
+  width: 50px;
+}
+/*3 Stages*/
+#Stages{
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+
+}
+#Title img{
+  width: 100vw;
+}
+
+#Content01{
+   width: 300vw;
+  display: flex;
+}
+
+
+#Content01 a{
+  width: 100vw;  
+}
+
+#Content01 a img{
+  width: 100%;
+  vertical-align: middle;
+}
+
+
+/* Part1 Map */
+#hedC{
+  
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedC .Part1{
+  font-size: 2.5rem;
+}
+#hedC img{
+    width: 100%;
+}
+
+/* Part 2 */
+#hedE{
+  
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedE img{
+  width: 100%;
+  margin: 25px 0;
+}
+#hedE .Part2{
+  font-size: 2.5rem;
+}
+#hedE .tag1{
+    width: 280px;
+    height: 25px;
+    line-height: 25px;
+    margin: 12px 2px 12px 2px;
+    color: #fff;  
+    border-radius: 4px;
+    border: none;
+    background-color: #ff384d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+#hedE .tag2{
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    margin: 12px 50px 12px 2px;
+    color: #000;
+    border-radius: 4px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+      #hedE .circle{
+        
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      #hedE .circle span{
+        width: 1vw;
+        height: 1vw;
+        background: #ddd;
+        border-radius: 50%;
+        margin: 0 1.5vw;
+      }
+       #hedE .circle span.active{
+        background: #3b3b3b;
+      }
+      /*Part3*/
+      #hedF h4{
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+/*Part3*/
+
+#hedF img{
+  width: 100%;
+  
+}
+#hedF .Part3{
+  font-size: 2.5rem;
+}
+#hedF .Years{
+  text-align: center;
+}
+#hedF .Years .Yearsbtn{
+  margin: 0 auto;
+
+}
+#hedF .tag3{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin: 50px 2px 12px 2px;
+    color: #fff;  
+    border-radius: 4px;
+    border: none;
+    background-color: #ff384d;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+#hedF .tag4{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin: 50px 2px 12px 2px;
+    color: #000;
+    border-radius: 4px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+}
+#hedF .tag5{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    margin: 50px 2px 12px 2px;
+    color: #000;
+    border-radius: 4px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+      #hedF .circle{
+        
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      #hedF .circle span{
+        width: 1vw;
+        height: 1vw;
+        background: #ddd;
+        border-radius: 50%;
+        margin: 0 1.5vw;
+      }
+       #hedF .circle span.active{
+        background: #3b3b3b;
+      }
+      /*Part3*/
+      #hedF h4{
+        text-align: center;
+        font-size: 1.5rem;
+      }
+#hedF p{
+    text-align: justify;
+    font-size: 2rem;
+    font-family:Helvetica; 
+    width: 65%;
+    margin: 0 auto;
+}
+
+/*END*/
+#hedJ {
+  border-top: 10px solid #a4a4a4;
+  width: 100%;
+  height: 1000px;
+  background-color: #fff;
+
+}
+#hedJ .cube{
+  margin-top: 100px;
+  width: 50px;
+  height: 400px;
+  background-color: #e1e1e1;
+}
+#hedJ p{
+  margin: 100px 180px;
+  font-size: 1.8rem;
+  line-height: 60px;
+}
+/*Part4*/
+#hedG{
+  
+    padding-top: 10rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedG .Part4{
+  font-size: 2.5rem;
+}
+#hedG img{
+    width: 100%;
+}
+/*Part5*/
+#hedH{
+  
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedH .Part5{
+  font-family: Helvetica;
+  font-size: 2.5rem;
+}
+#hedH img{
+    width: 100%;
+}
+#hedH p{
+  text-align: justify;
+  font-family: Helvetica;
+  font-size: 2rem;
+  width: 65%;
+  margin: 100px auto;
+}
+
+/*Part6*/
+#hedI{
+  
+    padding-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+#hedI .Part5{
+  font-family: Helvetica;
+  font-size: 2.5rem;
+}
+#hedI img{
+    width: 100%;
+}
+#hedI p{
+  text-align: justify;
+  font-family: Helvetica;
+  font-size: 2rem;
+  width: 65%;
+  margin: 100px auto;
+
+}
