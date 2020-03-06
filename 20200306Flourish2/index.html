@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Scrollama: Sticky Overlay Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='./style.css'>
+	<style>
+		@font-face {
+    		font-family: Helvetica;
+    		src: url(./Helvetica.ttf);
+		}
+		#scrolly {
+			position: relative;
+			background-color: rgb(239,239,239);
+			padding: 1rem;
+		}
+		#ninelines {
+			margin: 0;
+		    position: absolute;
+		    transform: translate(-50%, -50%);
+		    width:7%;
+		    top:68%;
+		    left:67%;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 100%;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			background-color: rgb(239,239,239);
+			z-index: 0;
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+		}
+		iframe{
+			width:100%;
+			height:100%;
+			position:absolute;
+			left:0px;
+			top: 0px;
+		}
+
+
+		.step {
+			margin: 0 auto 50% auto; /*两个框之间距离*/
+			
+			
+		}
+		.step p{
+			font-size: 16px;
+			color: (21,21,21);
+			font-family: Helvetica;
+			background: rgba(255,255,255,0.9);
+			margin:5% 10%;
+			padding: 5% 5% 5% 5%
+		}
+		.step span{
+			font-weight: bold;
+		}
+		.step:last-child {
+			margin-bottom: 0;
+		}
+		.clearfix:after{
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.fl{
+			float: left;
+		}
+		.point{
+			margin:5px;
+			width: 5px;
+			height: 5px;
+			border-radius: 17px;
+			background-color:rgba(255,56,77); 
+		}
+		.step span{
+			font-weight: bold;
+			color:rgb(255,56,77);
+		}
+	</style>
+
+</head>
+
+<body>
+	
+	<main>
+
+		<section id='scrolly'>
+
+			<figure>
+				
+
+				<div>
+					<img id='ninelines' src='./img/9lines.png' style="z-index:0">
+ 					<iframe id ='CGTN' src='./CGTN/CGTN.html#slide-0' frameborder='0' scrolling='no' style='z-index: 1;'>
+					</iframe>
+				</div>
+				
+				
+			</figure>
+
+			<article >
+				<div class='step' data-step='1'>
+					<p>They are like pearls scattered along the long history and connect chapters that mark the interactions between China and the outside world and should not be overlooked.</p>
+				</div>
+
+				<div class='step' data-step='2'>
+					<p>Despite the highs and lows, they are memorable chapters recording China opens up her door and welcomes economic, trade and cultural exchanges with the outside world.</p>
+				</div>
+
+				<div class='step' data-step='3'>
+					<p>Furthermore, they have witnessed how China becomes increasingly integrated to the world and promoted the rational, orderly and coordinated development of international immigration in China. They also are valuable experience and wisdom of China’s involvement in the global governance of immigration.</p>
+				</div>
+
+				<div class='step' data-step='4' style='margin-bottom: 40%'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center;margin: 5% 6% ">3 stages and 6 categories<br> in 7 decades <br> Division based on space and time</p>
+				</div>
+
+				<div class='step' data-step='5' style='margin-bottom: 20%'>
+					<p style="font-weight:bold"><span class="point fl clearfix"></span><span style="font-weight:bold;color:rgb(255,56,77)">1949-1978: </span>Searching far and wide: from self-isolation to opening up</p>
+				</div>
+				
+				<div class='step' data-step='6' style='margin-bottom: 50%'>
+					<p>First articles on foreigners: What we can learn from Norman Bethune and In Memory of Great Internationalist: Norman Bethune on 12 November 1949;
+					<br><br>
+					The first article on regulatory policy: Two Decrees of the Municipal Government on Regulating and Fostering Private Primary and High Schools on 19 August 1949, which stated no foreigner might fill the posts of principals of missionary schools 
+					<br><br>
+					Despite the favourable political and economic relations among the Soviet Union, Eastern Europe and China in the 1950s and the trade contacts with the West and the introduction of technology, China remained isolated in general. China’s economic development and diplomacy were plagued with errors especially from the 1960s onwards. For instance, emphasis was placed on “being guided by class struggle” when developing the economy, and all developed Western countries were regarded as imperialists, revisionists and anti-revolutionary, consequently the “non-conforming” struggle was waged against them. It is evident that the under 3% coverage on regulatory policies reflected our self-isolation and attempts to draw a clear line with the outside world.
+					</p>
+				</div>
+
+				<div class='step' data-step='7' style='margin-bottom: 20%'>
+					<p style="font-weight:bold"><span class="point fl clearfix"></span><span style="font-weight:bold;color:rgb(255,56,77)">1978-2012: </span>The winds of change: the policy of opening up dominated by introduction at different levels</p>
+				</div>
+				
+				<div class='step' data-step='8' style='margin-bottom:50%'>
+					<p>Following the demands of China’s opening up, coverage for the regulatory policies for foreigners in the country increased exponentially. <span>67%</span> of the coverage could primarily be divided into <span>6</span> categories, namely entry-exit management; family and marriage; investment and business; intellectual property; science, education, culture, health, arts and sports; and talents and incentives. China’s regulatory policy for foreigners grew by leaps and bounds after starting from scratch. As the scope of China’s opening up continued to expand, covering <span>92%</span> of the cities and counties, as many as <span>88</span> authorities across <span>20</span> provinces and municipalities were responsible for the promulgation of regulatory policies for foreigners, showing diverse synergy and complexity in management.
+					</p>
+				</div>
+
+				<div class='step' data-step='9' style='margin-bottom: 20%'>
+					<p style="font-weight:bold"><span class="point fl clearfix"></span><span style="font-weight:bold;color:rgb(255,56,77)">2013-2019: </span>Riding the wind and waves and setting sail: transition from scale-focused development to content-based construction and mutual learning among civilisations to provide world governance with Chinese solutions.</p>
+				</div>
+				
+				<div class='step' data-step='10' style=''>
+					<p>In 2013, 848,500 foreigners lived in China, and the number maintained an annual growth rate of 3.9% for ten consecutive years. Immigration to China was in the spotlight and China began to emerge as an attractive immigration destination. The intensity of reform was manifested at the following three levels to ensure rational, orderly and controllable development while promoting the exploration of all-round, in-depth reforms and coordinated development. Being self-focused and fair, learning from each other and sharing information, and active participation in global governance of immigration became the focus of this period in managing foreigners in the country. 
+					</p>
+				</div>
+
+				<div class='step' data-step='11' style='margin-bottom: 400px;'>
+					<p style="background: rgb(255,255,255,0)"></p>
+				</div>
+
+				<div class='step' data-step='12' style='margin-bottom: 100%;'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center">Check out when your hometown opened up to the foreigners</p>
+				</div>
+
+				<div class='step' data-step='13' style='margin-bottom: 25%;'>
+					<p><span>1978 </span> Over <span>100,000</span> foreign tourists visited China.</p>
+				</div>
+
+				<div class='step' data-step='14' style='margin-bottom: 25%;'>
+					<p><span>1985 </span> The opening up of the <span>Tibetan Plateau</span> saw foreigner climbers and explorers flocking to the area.</p>
+				</div>
+
+				<div class='step' data-step='15' style='margin-bottom: 25%;'>
+					<p><span>1994 </span> Foreigners holding a valid visa or residence document may visit <span>Shennongjia</span> National Nature Reserve without applying for a travel document. Procedures for foreign groups in Hong Kong wishing to visit Shenzhen were simplified, and the groups could stay for <span>72 hours</span>.
+					</p>
+				</div>
+
+				<div class='step' data-step='16' style='margin-bottom: 25%;'>
+					<p><span>2017 </span> In China received over 139.48 million tourists, allowing it to maintain its place as the fourth major tourist country of the world.
+					</p>
+				</div>
+
+				<div class='step' data-step='17' style='margin-bottom: 25%;'>
+					<p><span>2018 </span> MPS announced at a press conference that following the State Council’s approval, the number of countries whose tour groups may visit Hainan Province without a visa has been raised from 26 to 59 from 1 May 2018, and foreigners may visit visa-free for up to 30 days, as the visa-free policy is extended from groups to individuals. The policy is to date the most practical and open in China.
+					</p>
+				</div>
+
+				<div class='step' data-step='18' style='margin-bottom: 50%;'>
+					<p><span>2019 </span> A 144-hour visa-free transit was launched in Beijing, Tianjin, Hebei Province and the Yangtze River Delta, and over 1.8 million visitors took advantage of the policy.</p>
+				</div>
+
+				<div class='step' data-step='19' style='margin-bottom: 40%;'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center;margin:5% 0%">Immigration and entry-exit management<br>inbound tourism</p>
+				</div>
+
+				<div class='step' data-step='20' style='margin-bottom: 25%;'>
+					<p><span>1985 </span> The promulgation of the Rules for the Implementation of the Law of the P. R. C Governing the Administration of Entry and Exit of Foreigners introduced <span>7 categories</span> of Chinese visa.</p>
+				</div>
+
+				<div class='step' data-step='21' style='margin-bottom: 25%;'>
+					<p><span>1994 </span> Revised the Rules added a J-visa for foreign journalists, then expanded its visa categories from 8 to <span>12</span>. A special <span>Q-visa</span> is introduced for overseas Chinese</p>
+				</div>
+
+				<div class='step' data-step='22' style='margin-bottom: 25%;'>
+					<p><span>2004 </span> Promulgated the Administrative Measures for the Examination and Approval of Permanent Residency for Foreigners in China. This marked the formal execution of China’s green-card system.</p>
+				</div>
+
+				<div class='step' data-step='23' style='margin-bottom: 25%;'>
+					<p><span>2012 </span> Introduced the <span>Thousand Talents Program</span>(then <span>Ten Thousand Talents Program</span>), which drew more and more top foreign professionals to conduct business or take up employment in China.</p>
+				</div>
+
+				<div class='step' data-step='24' style='margin-bottom: 25%;'>
+					<p><span>2018 </span> The National Immigration Administration officially established. It leads to a milestone in China’s immigration management and opening up.</p>
+				</div>
+
+				<div class='step' data-step='25' style='margin-bottom: 50%;'>
+					<p><span>2019 </span> In 2018, China has issued 336,000 work permits to foreign talents, and over 95,000 foreigners worked in China.  MST announced that China is a participant and beneficiary of science and technology globalisation as well as a contributor to and bellwether for extensive innovation collaboration.</p>
+				</div>
+
+				<div class='step' data-step='26' style='margin-bottom: 25%;'>
+					<p><span>1978 </span> Over <span>100,000</span> foreign tourists visited China.</p>
+				</div>
+
+				<div class='step' data-step='27' style='margin-bottom: 25%;'>
+					<p><span>1985 </span> The opening up of the Tibetan Plateau saw foreigner climbers and explorers flocking to the area.</p>
+				</div>
+
+				<div class='step' data-step='28' style='margin-bottom: 25%;'>
+					<p><span>1994 </span> Foreigners holding a valid visa or residence document may visit Shennongjia National Nature Reserve without applying for a travel document. Procedures for foreign groups in Hong Kong wishing to visit Shenzhen were simplified, and the groups could stay for 72 hours.</p>
+				</div>
+
+				<div class='step' data-step='29' style='margin-bottom: 25%;'>
+					<p><span>2017 </span> In China received over <span>139.48</span> million tourists, allowing it to maintain its place as the fourth major tourist country of the world.</p>
+				</div>
+
+				<div class='step' data-step='30' style='margin-bottom: 25%;'>
+					<p><span>2018 </span> MPS announced at a press conference that following the State Council’s approval, the number of countries whose tour groups may visit Hainan Province without a visa has been raised from 26 to 59 from 1 May 2018, and foreigners may visit visa-free for up to 30 days, as the visa-free policy is extended from groups to individuals. The policy is to date the most practical and open in China.</p>
+				</div>
+
+				<div class='step' data-step='31' style='margin-bottom: 50%;'>
+					<p><span>2019 </span> 2019 A 144-hour visa-free transit was launched in Beijing, Tianjin, Hebei Province and the Yangtze River Delta, and over 1.8 million visitors took advantage of the policy.</p>
+				</div>
+
+				<div class='step' data-step='32' style='margin-bottom: 40%;'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center;margin: 5% 15%">Production, business<br>and investment</p>
+				</div>
+
+				<div class='step' data-step='33' style='margin-bottom: 25%;'>
+					<p><span>Foreign investors:</span><br>
+					The big data of P.D. coverage of the investment and business sector, which accounts for <span>45.8%</span> is a major index that reflects the in-depth participation of foreigners in China’s economic development, including <span>business types (joint cooperation/ joint venture/ foreign-owned enterprise), IP protection (invention patent/ publication/ trademark rights and copyright), price control, foreign exchange controls/ currency controls and business charge.</span>
+					</p>
+				</div>
+
+				<div class='step' data-step='34' style='margin-bottom: 50%;'>
+					<p>The Law of the People’s Republic of China on Chinese-Foreign Equity Joint Ventures in 1979 <span>served as a prelude</span> to foreign investment in China.<br><br>
+					So into which stages can China’s FDI policy changes be divided?
+					</p>
+				</div>
+
+				<div class='step' data-step='35' style='margin-bottom: 25%;'>
+					<p>Three laws on foreign investment were introduced since 1979, which offered preferential taxes and simplified the application for business permits. Foreign investment broke the deadlock and began to grow steadily, however,  concentrated primarily in China’s east-coast area and in small and medium-sized enterprises that were labour intensive and involved in manufacturing. 
+					</p>
+				</div>
+
+				<div class='step' data-step='36' style='margin-bottom: 25%;'>
+					<p>After China joined the WTO in 1992, foreign investment in China remained stable and continued to grow. In line with the law of fair competition, China introduced the Enterprise Income Tax Law and revoked preferential taxes for foreign investors. Foreign investors began to focus on the quality, prompting the industrial-structure upgrade, expanding to infrastructure construction and new high-tech projects. Meanwhile, systematic protection of IP came into force to protect the legal operations of foreign enterprises in China, including the introduction of the Patent Law, Regulations on the Protection of the Right to Communicate Works over Information Networks and Computers Software Protection. By the end of 2018, a total of <span>950,000</span> foreign companies invested, and the actual use of foreign investment exceeded <span>USD2.1 trillion</span>, making foreign direct investment (FDI) a pillar in China’s socioeconomic development. 
+					</p>
+				</div>
+
+				<div class='step' data-step='37' style='margin-bottom: 50%;'>
+					<p>On 15 March 2019, the 2nd Session of the 13th NPC carried the Foreign Investment Law of the P.R.C. As the first comprehensive and systematic law of China to deal with foreign investment, it marks the country now enters a new stage of regulation-based opening up, which is a milestone in further opening up and promoting foreign investment.
+					</p>
+				</div>
+
+				<div class='step' data-step='38' style='margin-bottom: 40%;'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center;margin: 5% 15%">Marriage and family life</p>
+				</div>
+
+				<div class='step' data-step='39' style='margin-bottom: 25%;'>
+					<p>The earliest coverage of PD on marriage between a Chinese and a foreign national was on the New Years Eve of 1937, when a Vietnamese general Hong Shui forged a strong bond with Chen Jiange during the Second Sino-Japanese War and later tied the knot with her.
+					</p>
+				</div>
+
+				<div class='step' data-step='40' style='margin-bottom: 25%;'>
+					<p>The Provisions for the Registration of Marriage between Chinese Citizens and Foreigners, ratified in 1983, were the earliest such provisions. By 2018, among the <span>10.13 million</span> registered couples across the country, 480,000 involved foreigners, overseas Chinese and residents of Hong Kong, Macau and Taiwan.<br>
+					Policies and regulations concerning foreigners’ marriage and family life in China accounted for 10.1% of the big data of media coverage over 70 years, and included marriage registration, adoption, inheritance, medical and health services, religion, entertainment, individual income-tax management and welfare and security.
+					</p>
+				</div>
+
+				<div class='step' data-step='41' style='margin-bottom: 25%;'>
+					<p>Development trend<br>
+					1.From the management to services: On 8 Augus t 2003, the State Council promulgated the revised Regulations on Marriage Registration and successfully transitioned from marriage-registration management to service, which safeguard the legal rights and interests of marrying couples and simplified the registration process. Among the 8.11 million registered couples across the country, 78,000 involved foreigners, overseas Chinese and residents of Hong Kong, Macau and Taiwan.
+					</p>
+				</div>
+
+				<div class='step' data-step='42' style='margin-bottom: 25%;'>
+					<p>2.Refined registration service for marriage: Since 2004, the service began keeping diversified records, including annual statistics of registration of marriage and divorce involving Chinese and foreign nationals, the age structure and distribution of registrants, changes in the ratio of marriage. They provided a more scientific and refined basis for development policies. Statistics showed marriage between Chinese and foreign nationals were changing from Chinese women marrying abroad to foreigners living and getting married in China – a rising and balancing trend. 2010 saw the solemn commemoration of the 60th anniversary marking the promulgation of the first marriage law of China. The texts for the awarding of marriage certificates were also expanded. 23 provinces developed an intra-provincial information network for marriage registration with Data Centre setting up and achieving real-time exchange at ministerial and provincial levels. In 2010, the country had a total of 2,314 marriage-registration service units, which registered 12.41 million couples, among them 49,000 involved foreigners, overseas Chinese and residents of Hong Kong, Macau and Taiwan.
+					</p>
+				</div>
+
+				<div class='step' data-step='43' style='margin-bottom: 50%;'>
+					<p>3.More diversified and immersed: The Adoption Law of the P.R. C(1992) Law of Succession(1985,2015), Regulation on the Administration of Medical Institutions(1994,) Administrative Provisions on Religious Activities of Foreigner Nationals(1990) stipulated the administrative measures for foreigners concerning adoption, inheritance, religious activities or the setting up of medical institutions in China.
+					</p>
+				</div>
+
+				<div class='step' data-step='44' style='margin-bottom: 40%;'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center;margin: 5% 20%">Cultural exchange</p>
+				</div>
+
+				<div class='step' data-step='45' style='margin-bottom: 25%;'>
+					<p>Cultural exchange has gone from being expansive to being intensive before joining politics and economy as the three major pillars. It is comprised of education, culture, health, sport and entertainment. 
+					</p>
+				</div>
+
+				<div class='step' data-step='46' style='margin-bottom: 25%;'>
+					<p>Cultural exchange as a unique and guiding channel <span>(1949 – 1978)</span><br>
+ 					As with socialist countries and other countries with diplomatic relations, a key form of visit to China by foreigners during this period involved sending theatre, sports and youth friendly groups. 
+					</p>
+				</div>
+
+				<div class='step' data-step='47' style='margin-bottom: 25%;'>
+					<p>Between <span>1949</span> and <span>1956</span>, a total of <span>4,238</span> artists from <span>42</span> theatre groups in <span>17</span> countries visited and performed in China, and with 10 visits, the Soviet Union was the most frequent visitor;
+					</p>
+				</div>
+
+				<div class='step' data-step='48' style='margin-bottom: 25%;'>
+					<p>In <span>1955</span>, <span>19</span> theatre groups from 16 countries visited 27 Chinese cities and staged 455 shows in front of over 1.5 million spectators.
+					</p>
+				</div>
+
+				<div class='step' data-step='49' style='margin-bottom: 25%;'>
+					<p>In <span>195</span>, <span>240,000</span> people visited the Soviet Union National Education Exhibition, systematically showcased the remarkable achievements and advanced experience of the Soviet national education, according to the Sino-Soviet Cultural Collaboration Agreement
+					</p>
+				</div>
+
+				<div class='step' data-step='50' style='margin-bottom: 25%;'>
+					<p><span>440</span> foreign films were translated into Chinese, and Film weeks were also held from Soviet Union, Indian, Japanese and French <span>(1949-1956)</span>;
+					</p>
+				</div>
+
+				<div class='step' data-step='51' style='margin-bottom: 25%;'>
+					<p>Many sports teams also visited China, including the football teams from the Soviet Union, Hungary, Yugoslavia and Myanmar; volleyball team from Romania; and table-tennis and volleyball teams from India.
+					</p>
+				</div>
+
+				<div class='step' data-step='52' style='margin-bottom: 25%;'>
+					<p>New stage in the Chinese reform <span>(1978 – 2012)</span>:
+					In 1979, Seiji Ozawa led the Boston Symphony Orchestra and visited China, where they performed with the China National Symphony Orchestra, the first top-class symphony orchestra of the world to perform in China after the Cultural Revolution.  
+					</p>
+				</div>
+
+				<div class='step' data-step='53' style='margin-bottom: 25%;'>
+					<p>The <span>1990</span> Beijing Asian Games were the first international general sports event to take place in China, which saw the participation of sports delegations with 6,578 members from 37 countries and regions;
+					</p>
+				</div>
+
+				<div class='step' data-step='54' style='margin-bottom: 25%;'>
+					<p>The promulgation of the Regulations on the National Management of Foreign Affairs in <span>2001</span> marked a new stage of development in cultural exchange between central and local authorities. More major international events and conferences with greater regional characteristics were held, with Beijing 2008 (in which a total of 10,078 athletes from 204 countries and regions took part) and Shanghai Expo <span>2010</span> (among the over <span>73 million</span> visitors, over 5 million were foreigners) being the most representative cases.
+					</p>
+				</div>
+
+				<div class='step' data-step='55' style='margin-bottom: 25%;'>
+					<p style="background: url(./img/title.png);background-size:100% 100%;font-weight:bold;text-align: center;margin: 5% 15%">Reward and Punishment</p>
+				</div>
+
+				<div class='step' data-step='56' style='margin-bottom: 25%;'>
+					<p>12 new reform policies were launched, which provide services to outstanding foreign youth, students and interns to start up innovative businesses while enhancing the standard of the corresponding services and management. Commendations such as the <span>Chinese Government Friendship Award and the Great Wall Friendship Award</span> highlight the contribution of foreign experts and friendly individuals to China’s modernisation and economic reform. To date, about <span>1,500</span> individuals from over two-dozen countries were presented with the Friendship Awards. A series of motivational policies including government scholarships and studying-in-China scholarships are drawing talents to China. The introduction of certain initiatives ensures foreigners wishing to further their careers in China are able to visit, willing to stay, living comfortably and moving freely. Foreigners are encouraged to actively take part in China’s development, as the country builds an internationally competitive talent-based immigration system.
+					</p>
+				</div>
+
+				<div class='step' data-step='57' style='margin-bottom: 25%;'>
+					<p>Currently, the coverage of P.D on the administrative policies for the punishment of foreigners include three types of illegal activities (entry, residence, employment), illegal business operations, the Anti-Monopoly Law, illegal acquisition of citizen information (2008)(5), foreign-exchange scam, arbitrage, poaching endangered animals, piracy and rights infringement, smuggling, sale of controlled article, the management of foreign sports coaches and players (qualification verification, transfer, anti-sportsmanship and –ethic behaviour), fire safety, drug trade, scalping cultural artefacts, smuggling wild animals and endangering national security; their coverage accounted for 11.1% of the total coverage.<br>
+					Ensuring equal legal treatment is also a key indicator of a country’s progressiveness, civility and openness, and no preferential treatment is given based on skin colour or nationality. Anyone who violates the law and regulations shall be treated equally without leniency. Only then will more outstanding foreign talents be drawn to work, live and study in China;
+					</p>
+				</div>
+
+			</article>
+
+
+
+
+		</section>
+
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
+	<script src='./stickyfill.min.js'></script>
+	<script src='./scrollama.min.js'></script>
+	<script>
+		// using d3 for convenience
+		var main = d3.select('main')
+		var scrolly = main.select('#scrolly');
+		var figure = scrolly.select('figure');
+		var article = scrolly.select('article');
+		var step = article.selectAll('.step');
+		var dic = [0,1,1,2,2,2,2,2,2,2,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,6,6,6,6,6,6,7,7,7,8,8,8,9,9,9,9,9,9,10,10,10,10,10,10,10,10,10,10,10,11,11,11]
+		/*var margin = new Array()
+		margin[43] = '10%'
+		margin.push('445','445','445','445','445','445','445','445','445','445')
+		*/
+		var z = new Array()
+		z[11] = 2
+		z.push(2,2,2,2,2,2)
+		/*
+		dic[0] = 0
+		dic[1] = 1
+		dic[2] = 1
+		dic[3] = 2
+		dic[3] = 2
+		dic[3] = 2
+		dic[3] = 2
+		dic[3] = 2
+		dic[3] = 2
+		dic[3] = 2
+		dic[10] = 3
+		dic[11] = 4
+		dic[18] = 5
+		dic[25] = 6
+		dic[31] = 7
+		*/
+
+		// initialize the scrollama
+		var scroller = scrollama();
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight*1.2);
+			var stepW = Math.floor(window.width);
+			//step.style('height', stepH + 'px');
+			//step.style('weight', stepW + 'px');
+
+			var figureHeight = window.innerHeight // 2
+			var figureMarginTop = (window.innerHeight - figureHeight) // 2
+
+			figure
+				.style('height',  figureHeight + 'px')
+				.style('top', figureMarginTop + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			console.log(response)
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+
+			// update graphic based on step
+			//figure.select('p').text(response.index + 1);
+			CGTN.src = "./CGTN/CGTN.html#slide-"+String(dic[response.index]);
+			//CGTN.style = 'top:'+String(margin[response.index]);
+			ninelines.style = 'z-index:'+String(z[response.index]);
+			
+
+		}
+
+		function setupStickyfill() {
+			d3.selectAll('.sticky').each(function () {
+				Stickyfill.add(this);
+			});
+		}
+
+		function init() {
+			setupStickyfill();
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				step: '#scrolly article .step',
+				offset: 0.9,
+				debug: false,
+			})
+				.onStepEnter(handleStepEnter)
+
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>
